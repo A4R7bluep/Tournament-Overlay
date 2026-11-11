@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dtclycqktn33"]
+
+[ext_resource type="Script" uid="uid://8fbi58g8sar6" path="res://setting_window.gd" id="1_285g4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_285g4"]
+
+[node name="SettingsWindow" type="Window" unique_id=2051170098]
+oversampling_override = 1.0
+title = "Overlay Settings"
+position = Vector2i(0, 36)
+size = Vector2i(1000, 500)
+script = ExtResource("1_285g4")
+
+[node name="Control" type="Control" parent="." unique_id=1915220998]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=2078422191]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="P1NameEnter" type="LineEdit" parent="Control/HBoxContainer" unique_id=1744975009]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+offset_transform_position = Vector2(50, 30)
+placeholder_text = "Player 1 Name"
+alignment = 1
+
+[node name="P1Score" type="SpinBox" parent="Control/HBoxContainer" unique_id=2069784833]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 10.0
+
+[node name="SetLeft" type="Button" parent="Control/HBoxContainer" unique_id=1498849839]
+layout_mode = 2
+text = "<"
+
+[node name="SetName" type="LineEdit" parent="Control/HBoxContainer" unique_id=339098135]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Pools"
+placeholder_text = "Enter Set Name"
+alignment = 1
+
+[node name="SetRight" type="Button" parent="Control/HBoxContainer" unique_id=134721698]
+layout_mode = 2
+text = ">"
+
+[node name="P2Score" type="SpinBox" parent="Control/HBoxContainer" unique_id=703883490]
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 10.0
+
+[node name="P2NameEnter" type="LineEdit" parent="Control/HBoxContainer" unique_id=141614968]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+offset_transform_position = Vector2(-50, 30)
+placeholder_text = "Player 2 Name"
+alignment = 1
+
+[node name="ApplyButton" type="Button" parent="Control" unique_id=834179375]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -15.5
+offset_right = 59.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_position = Vector2(0, -50)
+text = "Apply Settings"
+
+[node name="Label" type="Label" parent="Control" unique_id=1214057206]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Overlay Window's Controls:
+Left/Right Player Score Increase: Numpad 7/9
+Left/Right Player Score Decrease: Numpad 4/6
+Reset Scores: Numpad 8
+Swap Names: Numpad 5
+Set Name Forward: Numpad 3
+Set Name Backward: Numpad 1
+Open Settings Window: Numpad 2"
+label_settings = SubResource("LabelSettings_285g4")
+horizontal_alignment = 1
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="Control/HBoxContainer/SetLeft" to="." method="_on_set_left_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/SetRight" to="." method="_on_set_right_pressed"]
+[connection signal="pressed" from="Control/ApplyButton" to="." method="_on_apply_button_pressed"]

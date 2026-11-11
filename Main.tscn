@@ -3,6 +3,7 @@
 [ext_resource type="LabelSettings" uid="uid://dtchhteq6ja21" path="res://NameLabelSettings.tres" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://biiqsxemevb0w" path="res://main.gd" id="1_uu6xs"]
 [ext_resource type="LabelSettings" uid="uid://xxlmfk1c3f2h" path="res://SetNameLabelSettings.tres" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://dtclycqktn33" path="res://setting_window.tscn" id="4_cm0pq"]
 
 [node name="Control" type="Control" unique_id=436618964]
 layout_mode = 3
@@ -127,3 +128,8 @@ text = "EMPTY"
 label_settings = ExtResource("1_glv2v")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SettingsWindow" parent="." unique_id=2051170098 instance=ExtResource("4_cm0pq")]
+visible = false
+
+[connection signal="update_settings" from="SettingsWindow" to="." method="_on_settings_window_update_settings"]
