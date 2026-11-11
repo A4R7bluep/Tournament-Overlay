@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://ct7ccmh70bhq"]
+
+[ext_resource type="LabelSettings" uid="uid://dtchhteq6ja21" path="res://NameLabelSettings.tres" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://biiqsxemevb0w" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="LabelSettings" uid="uid://xxlmfk1c3f2h" path="res://SetNameLabelSettings.tres" id="3_r0du0"]
+
+[node name="Control" type="Control" unique_id=436618964]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uu6xs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1297835246]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="LeftNamePanel" type="Panel" parent="HBoxContainer" unique_id=1459449175]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(300, -1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftNamePanel" unique_id=1279183228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+label_settings = ExtResource("1_glv2v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftScorePanel" type="Panel" parent="HBoxContainer" unique_id=1542366965]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(45, -1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftScorePanel" unique_id=618310692]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = ExtResource("1_glv2v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftSpacer" type="Control" parent="HBoxContainer" unique_id=1671808436]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SetName" type="Panel" parent="HBoxContainer" unique_id=946052155]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(-1, 40)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/SetName" unique_id=1997950257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Loser's Quarters"
+label_settings = ExtResource("3_r0du0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightSpacer" type="Control" parent="HBoxContainer" unique_id=849670173]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightScorePanel" type="Panel" parent="HBoxContainer" unique_id=1400448719]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(45, -1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/RightScorePanel" unique_id=1322354703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = ExtResource("1_glv2v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightNamePanel" type="Panel" parent="HBoxContainer" unique_id=871732916]
+custom_minimum_size = Vector2(0, 50)
+custom_maximum_size = Vector2(300, -1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/RightNamePanel" unique_id=232714437]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+label_settings = ExtResource("1_glv2v")
+horizontal_alignment = 1
+vertical_alignment = 1
