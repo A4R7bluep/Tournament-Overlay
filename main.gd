@@ -20,11 +20,6 @@ var SetStr = "Pools"
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	var file = FileAccess.open("res://names.txt", FileAccess.READ)
-	var content = file.get_as_text().strip_edges(true, true).split(" ; ")
-	Player1Name = content[0]
-	Player2Name = content[1]
-	update_ui()
 	open_settings()
 
 
